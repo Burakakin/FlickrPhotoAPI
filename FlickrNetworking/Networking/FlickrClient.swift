@@ -20,15 +20,15 @@ class FlickrClient: APIClient {
         self.init(configuration: .default)
     }
     
-    func getFeed(completion: @escaping (Result<FlickrAPI?, APIError>) -> Void) {
+    func getFeed(page: Int, completion: @escaping (Result<FlickrAPI?, APIError>) -> Void) {
         
-        let serverURL = "https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=374fe3ac30cb2970ec9f555af4939833&per_page=20&format=json&nojsoncallback=1"
+//        let serverURL = "https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=374fe3ac30cb2970ec9f555af4939833&per_page=20&format=json&nojsoncallback=1"
         
-        let url = URL(string: serverURL)
-        guard let newUrl = url else { return  }
+        let serverURL = "https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=374fe3ac30cb2970ec9f555af4939833&per_page=20&page=\(page)&format=json&nojsoncallback=1"
 
-
-        fetch(with: newUrl, decode: { (json) in
+        let url = URL(string: serverURL)!
+        
+        fetch(with: url, decode: { (json) in
             guard let recentPhoto = json as? FlickrAPI else { return  nil }
             return recentPhoto
         }, completion: completion)

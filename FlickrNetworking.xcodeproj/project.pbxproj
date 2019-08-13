@@ -18,6 +18,7 @@
 		A8CCA1F02301F982003C12D9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCA1EF2301F982003C12D9 /* Result.swift */; };
 		A8CCA1F22301F9AC003C12D9 /* FlickrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCA1F12301F9AC003C12D9 /* FlickrClient.swift */; };
 		A8CCA1F42301FED1003C12D9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCA1F32301FED1003C12D9 /* Photo.swift */; };
+		A8D37DC4230350D6001D95A7 /* photoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D37DC3230350D6001D95A7 /* photoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		A8CCA1EF2301F982003C12D9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A8CCA1F12301F9AC003C12D9 /* FlickrClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrClient.swift; sourceTree = "<group>"; };
 		A8CCA1F32301FED1003C12D9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		A8D37DC3230350D6001D95A7 /* photoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		A8CCA1E52301F50F003C12D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A8D37DC3230350D6001D95A7 /* photoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				A8CCA1F02301F982003C12D9 /* Result.swift in Sources */,
 				A879FED72301F23700E0E1E0 /* ViewController.swift in Sources */,
 				A8CCA1F22301F9AC003C12D9 /* FlickrClient.swift in Sources */,
+				A8D37DC4230350D6001D95A7 /* photoCell.swift in Sources */,
 				A879FED52301F23700E0E1E0 /* AppDelegate.swift in Sources */,
 				A8CCA1EE2301F8F3003C12D9 /* APIClient.swift in Sources */,
 				A8CCA1EA2301F54A003C12D9 /* APIError.swift in Sources */,

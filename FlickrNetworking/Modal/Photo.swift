@@ -17,12 +17,10 @@ struct Photos: Decodable {
 }
 
 struct Photo: Decodable {
-    
     let id: String
-    let title: String
+    let owner: String
+    let secret: String
+    let server: String
+    let farm: Int
+    let title: String?
 }
-
-//struct PhotoFeedResult: Decodable {
-//
-//    let results: [Photo]
-//}
