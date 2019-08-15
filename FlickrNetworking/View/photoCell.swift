@@ -21,25 +21,14 @@ class photoCell: UITableViewCell {
     
     func configureCell(photo: Photo) {
         let stringURL = "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret).jpg"
-        let url = URL(string: stringURL)
         
-        flickrPhotoImageView.load(url: url!)
+        ImageService.getImage(withUrl: stringURL) { (image) in
+            self.flickrPhotoImageView.image = image
+        }
     }
     
    
 
 }
 
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
-}
+
